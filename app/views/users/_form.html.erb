@@ -1,0 +1,181 @@
+<div class='col-md-6'>
+  <div>
+    <%= form_with(model: user, local: true) do |form| %>
+      <% if user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+          <ul>
+          <% user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field"> 1.
+        <%= form.label :name %> :
+        <%= form.text_field :name, id: :user_name %>
+      </div><br/>
+
+      <div class="field"> 2.
+        <%= form.label :phone %> :
+        <%= form.text_field :phone, id: :user_phone %>
+      </div><br/>
+
+      <div class="field"> 3.
+        <%= form.label :email %> :
+        <%= form.text_field :email, id: :user_email %>
+      </div><br/>
+
+      <div class="form-group"> 4.
+        <label for="location">Location:</label>
+        <select class="form-control" id="location">
+          <option>Tourist Spot</option>
+          <option>Town</option>
+          <option>Inland</option>
+          <option>Rural</option>
+          <option>Others</option>
+        </select>
+      </div><br/>
+
+      <div class="field"> 5.
+        <%= form.label :town %> :
+        <%= form.text_field :town, id: :user_town %>
+      </div><br/>
+
+      <div class="field"> 6. 
+        <%= form.label :years_in_business %> :
+        <%= form.number_field :years_in_business, id: :user_years_in_business %>
+      </div><br/>
+
+      <div class="form-group"> 7.
+        <label for="location">Category of Business:</label>
+        <select class="form-control" id="category_of_business">
+          <option>Bakery</option>
+          <option>Spirits</option>
+          <option>Hotels</option>
+          <option>Bar&Rest</option>
+          <option>Ceremonial Hall</option>
+          <option>Others</option>
+        </select>
+      </div><br/>
+
+      <div class="field"> 8. 
+        <%= form.label :number_of_sales_in_a_day %> (estimated):
+        <%= form.number_field :no_sales_per_day, id: :user_no_sales_per_day %>
+      </div><br/>
+
+      <div class="field"> 9.
+        <label> Types of Packaging Water Brand Sold : </label>
+        <select id="type_of_brand" multiple="multiple" name="type_of_brand[]">
+          <option value="freezer">Bisleri</option>
+          <option value="delivery">Aquafina</option>
+          <option value="freezer and delivery">Kinley</option>
+          <option value="Incentives">Bindu</option>
+        </select>
+      </div><br/>
+
+      <div class="field"> 10. 
+        <%= form.label :open_to_new_brand %> :
+        <div class = "addcs" style= "margin-left:10%">
+          <div class="radio">
+            <label><input type="radio" name="yes" checked>Yes</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="no">No</label>
+          </div>
+        </div>
+      </div><br/>
+
+      <div class="field"> 11. 
+        <%= form.label :commission_from_distributors %> (in percentage) :
+        <%= form.number_field :commission_from_distributors, id: :user_commission_from_distributors %>
+      </div><br/>
+
+      <div class="field"> 12. 
+        <%= form.label :local_distributors_name %> :
+        <%= form.text_field :local_distributor_name, id: :user_local_distributor_name %>
+      </div><br/>
+
+      <div class="field"> 13. 
+        <%= form.label :selling_price_of_water_bottles %> :
+        <%= form.number_field :selling_price_bottles, id: :user_selling_price_bottles %>
+      </div><br/>
+
+      <div class="field"> 14.
+        <%= form.label :expected_water_bottle_cost_per_litre %> :
+        <%= form.number_field :expected_bottle_cost, id: :user_expected_bottle_cost %>
+      </div><br/>
+
+      <div class="field"> 15.
+        <%= form.label :would_you_like_to_sell_our_product %> :
+        <div class = "addcss2" style= "margin-left:10%">
+          <div class="radio">
+            <label><input type="radio" name="sell_yes" checked>Yes</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="sell_no">No</label>
+          </div>
+        </div>
+      </div><br/>
+
+      <div > 16. 
+        <label> Seasonal Sales Report:</label>
+        <div class="all_period" style="margin-left:10%">
+          <div class="field">
+            <%= form.label :high_period %> :
+            <%= form.text_field :high_period, id: :user_high_period %>
+          </div>
+
+          <div class="field"> 
+            <%= form.label :low_period %> :
+            <%= form.text_field :low_period, id: :user_low_period %>
+          </div>
+
+          <div class="field"> 
+            <%= form.label :moderate %> :
+            <%= form.text_field :moderate, id: :user_moderate %>
+          </div>
+        </div>
+      </div><br/>
+
+      <div class="field"> 17.
+        <label> Amenities provided :</label>
+        <select id="amenities_provided" multiple="multiple" name=" amenities_provided[]">
+          <option value="freezer">Freezer</option>
+          <option value="delivery">Delivery</option>
+          <option value="freezer and delivery">Freezer and Delivery</option>
+          <option value="Incentives">Incentives</option>
+        </select>
+      </div><br/>
+
+      <div class="field"> 18.
+        <%= form.label :number_of_deliveries_done_by_your_distributor_in_a_month %> :
+        <%= form.number_field :total_delivered_by_distributor, id: :user_total_delivered_by_distributor %>
+      </div><br/>
+
+      <div class="field"> 19.
+        <%= form.label :local_choice_of_drink %> :
+        <%= form.text_field :local_choice_of_drink, id: :user_local_choice_of_drink %>
+      </div><br/>
+
+       <div class="field"> 20.
+        <%= form.label :advertising_material_provided %> :
+        <%= form.text_field :advertising_materials_provided, id: :user_advertising_material_provided %>
+      </div><br/>
+
+      <div class="actions">
+        <%= form.submit class: "btn btn-primary"%>
+        <input class="btn btn-danger" type="reset" value="Reset">
+      </div>
+
+    <% end %>
+  <div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('#type_of_brand, #amenities_provided').multiselect();
+  });
+</script>

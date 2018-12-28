@@ -1,0 +1,2 @@
+json.extract! user, :id, :name, :phone, :email, :location, :town, :years_in_business, :category_business, :no_sales_per_day, :type_of_brand, :open_to_new_brand, :commission_from_distributors, :local_distributor_name, :selling_price_bottles, :expected_bottle_cost, :sell_our_product, :high_period, :low_period, :moderate, :amenities_provided, :total_delivered_by_distributor, :local_choice_of_drink, :advertising_material_provided, :created_at, :updated_at
+json.url user_url(user, format: :json)

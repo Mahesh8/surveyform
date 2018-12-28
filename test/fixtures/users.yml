@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  phone: MyString
+  email: MyString
+  location: MyString
+  town: MyString
+  years_in_business: 1
+  category_business: MyString
+  no_sales_per_day: 1
+  type_of_brand: MyString
+  open_to_new_brand: false
+  commission_from_distributors: 1
+  local_distributor_name: MyString
+  selling_price_bottles: 1
+  expected_bottle_cost: 1
+  sell_our_product: false
+  high_period: MyString
+  low_period: MyString
+  moderate: MyString
+  amenities_provided: MyString
+  total_delivered_by_distributor: 1
+  local_choice_of_drink: MyString
+  advertising_material_provided: MyString
+
+two:
+  name: MyString
+  phone: MyString
+  email: MyString
+  location: MyString
+  town: MyString
+  years_in_business: 1
+  category_business: MyString
+  no_sales_per_day: 1
+  type_of_brand: MyString
+  open_to_new_brand: false
+  commission_from_distributors: 1
+  local_distributor_name: MyString
+  selling_price_bottles: 1
+  expected_bottle_cost: 1
+  sell_our_product: false
+  high_period: MyString
+  low_period: MyString
+  moderate: MyString
+  amenities_provided: MyString
+  total_delivered_by_distributor: 1
+  local_choice_of_drink: MyString
+  advertising_material_provided: MyString

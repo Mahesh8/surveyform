@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Location</th>
+      <th>Town</th>
+      <th>Years in business</th>
+      <th>Category business</th>
+      <th>No sales per day</th>
+      <th>Type of brand</th>
+      <th>Open to new brand</th>
+      <th>Commission from distributors</th>
+      <th>Local distributor name</th>
+      <th>Selling price bottles</th>
+      <th>Expected bottle cost</th>
+      <th>Sell our product</th>
+      <th>High period</th>
+      <th>Low period</th>
+      <th>Moderate</th>
+      <th>Amenities provided</th>
+      <th>Total delivered by distributor</th>
+      <th>Local choice of drink</th>
+      <th>Advertising material provided</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.phone %></td>
+        <td><%= user.email %></td>
+        <td><%= user.location %></td>
+        <td><%= user.town %></td>
+        <td><%= user.years_in_business %></td>
+        <td><%= user.category_business %></td>
+        <td><%= user.no_sales_per_day %></td>
+        <td><%= user.type_of_brand %></td>
+        <td><%= user.open_to_new_brand %></td>
+        <td><%= user.commission_from_distributors %></td>
+        <td><%= user.local_distributor_name %></td>
+        <td><%= user.selling_price_bottles %></td>
+        <td><%= user.expected_bottle_cost %></td>
+        <td><%= user.sell_our_product %></td>
+        <td><%= user.high_period %></td>
+        <td><%= user.low_period %></td>
+        <td><%= user.moderate %></td>
+        <td><%= user.amenities_provided %></td>
+        <td><%= user.total_delivered_by_distributor %></td>
+        <td><%= user.local_choice_of_drink %></td>
+        <td><%= user.advertising_material_provided %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
