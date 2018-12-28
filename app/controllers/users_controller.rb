@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.all.paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /users/1
@@ -24,13 +24,11 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    binding.pry
     @user = User.new(user_params)
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
+        format.html { redirect_to @user, notice: 'User was successfully updated.' }
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -70,6 +68,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :phone, :email, :location, :town, :years_in_business, :category_business, :no_sales_per_day, :type_of_brand, :open_to_new_brand, :commission_from_distributors, :local_distributor_name, :selling_price_bottles, :expected_bottle_cost, :sell_our_product, :high_period, :low_period, :moderate, :amenities_provided, :total_delivered_by_distributor, :local_choice_of_drink, :advertising_material_provided)
+      params.require(:user).permit(:name, :phone, :email, :location, :town, :years_in_business, :category_business, :no_sales_per_day, :open_to_new_brand, :commission_from_distributors, :local_distributor_name, :selling_price_bottles, :expected_bottle_cost, :sell_our_product, :high_period, :low_period, :moderate, :total_delivered_by_distributor, :local_choice_of_drink, :advertising_material_provided, :type_of_brand => [], :amenities_provided => [])
     end
 end

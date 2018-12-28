@@ -4,7 +4,6 @@
       <% if user.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
           <ul>
           <% user.errors.full_messages.each do |message| %>
             <li><%= message %></li>
@@ -30,7 +29,7 @@
 
       <div class="form-group"> 4.
         <label for="location">Location:</label>
-        <select class="form-control" id="location">
+        <select class="form-control" id="location" name="user[location]">
           <option>Tourist Spot</option>
           <option>Town</option>
           <option>Inland</option>
@@ -50,8 +49,8 @@
       </div><br/>
 
       <div class="form-group"> 7.
-        <label for="location">Category of Business:</label>
-        <select class="form-control" id="category_of_business">
+        <label for="category_business">Category of Business:</label>
+        <select class="form-control" id="category_business" name="user[category_business]">
           <option>Bakery</option>
           <option>Spirits</option>
           <option>Hotels</option>
@@ -68,11 +67,11 @@
 
       <div class="field"> 9.
         <label> Types of Packaging Water Brand Sold : </label>
-        <select id="type_of_brand" multiple="multiple" name="type_of_brand[]">
-          <option value="freezer">Bisleri</option>
-          <option value="delivery">Aquafina</option>
-          <option value="freezer and delivery">Kinley</option>
-          <option value="Incentives">Bindu</option>
+        <select class="form-control" id="type_of_brand" multiple="multiple" name="user[type_of_brand][]">
+          <option value="Bisleri">Bisleri</option>
+          <option value="Aquafina">Aquafina</option>
+          <option value="Kinley">Kinley</option>
+          <option value="Bindu">Bindu</option>
         </select>
       </div><br/>
 
@@ -80,10 +79,10 @@
         <%= form.label :open_to_new_brand %> :
         <div class = "addcs" style= "margin-left:10%">
           <div class="radio">
-            <label><input type="radio" name="yes" checked>Yes</label>
+            <label><input type="radio" name="user[open_to_new_brand]" value=true checked> Yes </label>
           </div>
           <div class="radio">
-            <label><input type="radio" name="no">No</label>
+            <label><input type="radio" name="user[open_to_new_brand]" value=false> No</label>
           </div>
         </div>
       </div><br/>
@@ -112,10 +111,10 @@
         <%= form.label :would_you_like_to_sell_our_product %> :
         <div class = "addcss2" style= "margin-left:10%">
           <div class="radio">
-            <label><input type="radio" name="sell_yes" checked>Yes</label>
+            <label><input type="radio" name="user[sell_our_product]" value=true checked>Yes</label>
           </div>
           <div class="radio">
-            <label><input type="radio" name="sell_no">No</label>
+            <label><input type="radio" name="user[sell_our_product]" value=false >No</label>
           </div>
         </div>
       </div><br/>
@@ -142,7 +141,7 @@
 
       <div class="field"> 17.
         <label> Amenities provided :</label>
-        <select id="amenities_provided" multiple="multiple" name=" amenities_provided[]">
+        <select class="form-control" id="amenities_provided" multiple="multiple" name="user[amenities_provided][]">
           <option value="freezer">Freezer</option>
           <option value="delivery">Delivery</option>
           <option value="freezer and delivery">Freezer and Delivery</option>
