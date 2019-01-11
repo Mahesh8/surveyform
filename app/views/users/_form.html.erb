@@ -1,4 +1,4 @@
-<div class='col-md-6'>
+<div class='col-md-8'>
   <div>
     <%= form_with(model: user, local: true) do |form| %>
       <% if user.errors.any? %>
@@ -72,8 +72,56 @@
           <option value="Aquafina">Aquafina</option>
           <option value="Kinley">Kinley</option>
           <option value="Bindu">Bindu</option>
+          <option value="local">Local</option>
+          <option value="others">Others</option>
         </select>
       </div><br/>
+
+      <div class="field"> 
+        <div id="Bisleri" class ="hidden">
+          <label> Cost of Bisleri : </label>
+          Half litres:<input type="number" name="users[cost][Bisleri][half_litre]"/>
+          1 litres: <input type="number" name="users[cost][Bisleri][half_litre]"/> 
+          2 litres: <input type="number" name="users[cost][Bisleri][half_litre]"/> 
+          <br/>
+        </div>
+        <div id="Aquafina" class ="hidden">
+          <label> Cost of Aquafina : </label>
+          Half litres: <input type="number" name="users[cost][Aquafina][half_litre]"/> 
+          1 litres:  <input type="number" name="users[cost][Aquafina][half_litre]"/> 
+          2 litres: <input type="number" name="users[cost][Aquafina][half_litre]"/> 
+          <br/>
+        </div>
+        <div id="Kinley" class ="hidden">
+          <label> Cost of Kinley : </label>
+          Half litres: <input type="number" name="users[cost][Kinley][half_litre]"/> 
+          1 litres:<input type="number" name="users[cost][Kinley][half_litre]"/> 
+          2 litres:<input type="number" name="users[cost][Kinley][half_litre]"/>  
+          <br/>
+        </div>
+        <div id="Bindu" class ="hidden">
+          <label> Cost of Bindu : </label>
+          Half litres:  <input type="number" name="users[cost][Bindu][half_litre]"/> 
+          1 litres:<input type="number" name="users[cost][Bindu][half_litre]"/> 
+          2 litres:<input type="number" name="users[cost][Bindu][half_litre]"/> 
+          <br/>
+        </div>
+        <div id="local" class ="hidden">
+          <label> Cost of Local : </label>
+          Half litres: <input type="number" name="users[cost][local][half_litre]"/>
+          1 litres:<input type="number" name="users[cost][local][half_litre]"/> 
+          2 litres:<input type="number" name="users[cost][local][half_litre]"/> 
+          <br/>
+        </div>
+        <div id="others" class ="hidden">
+          <label> Cost of Others : </label>
+          Half litres: <input type="number" name="users[cost][others][half_litre]"/> 
+          1 litres:<input type="number" name="users[cost][others][half_litre]"/> 
+          2 litres:<input type="number" name="users[cost][others][half_litre]"/>
+          <br/>
+        </div>
+      </div>
+      <br/>
 
       <div class="field"> 10. 
         <%= form.label :open_to_new_brand %> :
@@ -177,4 +225,19 @@
   $(document).ready(function() {
       $('#type_of_brand, #amenities_provided').multiselect();
   });
+
+  $(function() {
+  $("#type_of_brand").on("change", function() {
+    var selected_values = $(this).val();
+
+    // add hidden to divs
+    // $(".field > div").addClass("hidden");
+
+    // remove hidden from selected divs
+    selected_values.forEach(function(val) {
+      var id = "#" + val;
+      $(id).removeClass("hidden");
+    });
+  });
+});
 </script>

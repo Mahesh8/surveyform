@@ -14,6 +14,7 @@
       <th>Category business</th>
       <th>No sales per day</th>
       <th>Type of brand</th>
+      <th> Cost </th>
       <th>Open to new brand</th>
       <th>Commission from distributors</th>
       <th>Local distributor name</th>
@@ -43,6 +44,7 @@
         <td><%= user.category_business %></td>
         <td><%= user.no_sales_per_day %></td>
         <td><%= user.type_of_brand %></td>
+        <td><%= user.cost %></td>
         <td><%= user.open_to_new_brand %></td>
         <td><%= user.commission_from_distributors %></td>
         <td><%= user.local_distributor_name %></td>
@@ -67,4 +69,5 @@
 <br>
 
 <%= link_to 'New User', new_user_path, class: "btn btn-primary" %>
+<%= link_to 'Download as .xlsx', users_path(format: :xlsx) , class: "btn btn-primary"%>
 <%= will_paginate @users %>

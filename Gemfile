@@ -32,6 +32,7 @@ gem 'jquery-rails'
 gem 'bootstrap-multiselect-rails'
 gem 'pry'
 gem 'will_paginate', '~> 3.1.0'
+gem 'write_xlsx'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
