@@ -77,47 +77,47 @@
         </select>
       </div><br/>
 
-      <div class="field"> 
-        <div id="Bisleri" class ="hidden">
+      <div class="field1"> 
+        <div id="Bisleri" class ="hidden" style= "padding:10px;">
           <label> Cost of Bisleri : </label>
-          Half litres:<input type="number" name="users[cost][Bisleri][half_litre]"/>
-          1 litres: <input type="number" name="users[cost][Bisleri][half_litre]"/> 
-          2 litres: <input type="number" name="users[cost][Bisleri][half_litre]"/> 
+          Half litres:<input type="number" name="user[cost][Bisleri][half_litre]"/>
+          1 litres: <input type="number" name="user[cost][Bisleri][half_litre]"/> 
+          2 litres: <input type="number" name="user[cost][Bisleri][half_litre]"/> 
           <br/>
         </div>
-        <div id="Aquafina" class ="hidden">
+        <div id="Aquafina" class ="hidden" style= "padding:10px;">
           <label> Cost of Aquafina : </label>
-          Half litres: <input type="number" name="users[cost][Aquafina][half_litre]"/> 
-          1 litres:  <input type="number" name="users[cost][Aquafina][half_litre]"/> 
-          2 litres: <input type="number" name="users[cost][Aquafina][half_litre]"/> 
+          Half litres: <input type="number" name="user[cost][Aquafina][half_litre]"/> 
+          1 litres:  <input type="number" name="user[cost][Aquafina][half_litre]"/> 
+          2 litres: <input type="number" name="user[cost][Aquafina][half_litre]"/> 
           <br/>
         </div>
-        <div id="Kinley" class ="hidden">
+        <div id="Kinley" class ="hidden" style= "padding:10px;">
           <label> Cost of Kinley : </label>
-          Half litres: <input type="number" name="users[cost][Kinley][half_litre]"/> 
-          1 litres:<input type="number" name="users[cost][Kinley][half_litre]"/> 
-          2 litres:<input type="number" name="users[cost][Kinley][half_litre]"/>  
+          Half litres: <input type="number" name="user[cost][Kinley][half_litre]"/> 
+          1 litres:<input type="number" name="user[cost][Kinley][half_litre]"/> 
+          2 litres:<input type="number" name="user[cost][Kinley][half_litre]"/>  
           <br/>
         </div>
-        <div id="Bindu" class ="hidden">
+        <div id="Bindu" class ="hidden" style= "padding:10px;">
           <label> Cost of Bindu : </label>
-          Half litres:  <input type="number" name="users[cost][Bindu][half_litre]"/> 
-          1 litres:<input type="number" name="users[cost][Bindu][half_litre]"/> 
-          2 litres:<input type="number" name="users[cost][Bindu][half_litre]"/> 
+          Half litres:  <input type="number" name="user[cost][Bindu][half_litre]"/> 
+          1 litres:<input type="number" name="user[cost][Bindu][half_litre]"/> 
+          2 litres:<input type="number" name="user[cost][Bindu][half_litre]"/> 
           <br/>
         </div>
-        <div id="local" class ="hidden">
+        <div id="local" class ="hidden" style= "padding:10px;">
           <label> Cost of Local : </label>
-          Half litres: <input type="number" name="users[cost][local][half_litre]"/>
-          1 litres:<input type="number" name="users[cost][local][half_litre]"/> 
-          2 litres:<input type="number" name="users[cost][local][half_litre]"/> 
+          Half litres: <input type="number" name="user[cost][local][half_litre]"/>
+          1 litres:<input type="number" name="user[cost][local][half_litre]"/> 
+          2 litres:<input type="number" name="user[cost][local][half_litre]"/> 
           <br/>
         </div>
-        <div id="others" class ="hidden">
+        <div id="others" class ="hidden" style= "padding:10px;">
           <label> Cost of Others : </label>
-          Half litres: <input type="number" name="users[cost][others][half_litre]"/> 
-          1 litres:<input type="number" name="users[cost][others][half_litre]"/> 
-          2 litres:<input type="number" name="users[cost][others][half_litre]"/>
+          Half litres: <input type="number" name="user[cost][others][half_litre]"/> 
+          1 litres:<input type="number" name="user[cost][others][half_litre]"/> 
+          2 litres:<input type="number" name="user[cost][others][half_litre]"/>
           <br/>
         </div>
       </div>
@@ -209,7 +209,7 @@
 
        <div class="field"> 20.
         <%= form.label :advertising_material_provided %> :
-        <%= form.text_field :advertising_materials_provided, id: :user_advertising_material_provided %>
+        <%= form.text_field :advertising_material_provided, id: :user_advertising_material_provided %>
       </div><br/>
 
       <div class="actions">
@@ -231,7 +231,7 @@
     var selected_values = $(this).val();
 
     // add hidden to divs
-    // $(".field > div").addClass("hidden");
+    $(".field1 > div").addClass("hidden");
 
     // remove hidden from selected divs
     selected_values.forEach(function(val) {
