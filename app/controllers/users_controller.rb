@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @users = User.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 10)
     respond_to do |format|
       format.html
+      format.xlsx
     end
   end
 
