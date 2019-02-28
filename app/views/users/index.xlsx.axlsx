@@ -1,8 +1,8 @@
 wb = xlsx_package.workbook
 
 wb.add_worksheet(name: "Users") do |sheet|
-  sheet.add_row %w(id name email)
+  sheet.add_row %w(Name Phone Email Location Town  Years_in_business Category_business No_sales_per_day  Type_of_brand Cost  Open_to_new_brand Commission_from_distributors  Local_distributor_name  Selling_price_per_ bottles Expected_bottle_cost  Sell_our_product  High_period Low_period  Moderate  Amenities_provided  Total_delivered_by_distributor  Local_choice_of_drink Advertising_material_provided)
   @users.each do |user|
-    sheet.add_row [user.id, user.name, user.email]
+    sheet.add_row [user.name, user.phone, user.email, user.location, user.town, user.years_in_business, user.category_business, user.no_sales_per_day, user.type_of_brand, user.cost, user.open_to_new_brand, user.commission_from_distributors, user.local_distributor_name, user.local_distributor_name, user.selling_price_bottles, user.expected_bottle_cost, user.sell_our_product, user.high_period, user.low_period, user.moderate, user.amenities_provided, user.total_delivered_by_distributor, user.local_choice_of_drink, user.advertising_material_provided]
   end
 end

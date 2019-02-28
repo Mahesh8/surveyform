@@ -33,9 +33,11 @@ gem 'bootstrap-multiselect-rails'
 gem 'pry'
 gem 'will_paginate', '~> 3.1.0'
 gem 'json'
-gem 'axlsx', '= 2.0.1'
+gem 'rubyzip', '= 1.1.0'
+gem 'axlsx'
 gem 'axlsx_rails'
-
+# gem 'axlsx'
+# gem 'axlsx_rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
