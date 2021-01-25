@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   def show
   end
 
-  # GET /users/new
+  # GET /users/new test print
   def new
     @user = User.new
   end
